@@ -5,5 +5,7 @@ export default interface User {
   comfirmPassword?: string;
   username?: string;
   authenticationToken?: string;
+  fullName?: string;
   role?: string;
+  position?: string;
 }

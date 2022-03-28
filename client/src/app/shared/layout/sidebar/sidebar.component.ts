@@ -6,12 +6,12 @@ import {
   transition,
   animate,
 } from '@angular/animations';
-import { SidebarService } from './sidebar.service';
 import { AccountService } from 'src/app/module/account/service/account.service';
 import User from 'src/app/module/account/models/account.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { SystemRole } from 'src/app/core/enum/role.enum';
+import { SidebarService } from '../../service/sidebar.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -76,13 +76,20 @@ export class SidebarComponent implements OnInit {
     this.sidebarservice.setSidebarState(true);
   }
 
+  // public logout(): void {
+  //   this.accountService.logout().subscribe({
+  //     next: () => {
+  //       void this.router.navigate(['/account/login']);
+  //       this.toastService.show('We will miss you UwU');
+  //     },
+  //     error: () => this.toastService.error('Some thing went wrong!'),
+  //   });
+  // }
+
   public logout(): void {
-    this.accountService.logout().subscribe({
-      next: () => {
-        void this.router.navigate(['/account/login']);
-        this.toastService.show('We will miss you UwU');
-      },
-      error: () => this.toastService.error('Some thing went wrong!'),
-    });
+    this.router.navigate(['/account/login']);
+    this.toastService.show('We will miss you UwU');
   }
+
+
 }

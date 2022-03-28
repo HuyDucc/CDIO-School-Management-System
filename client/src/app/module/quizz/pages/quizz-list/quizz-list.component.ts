@@ -44,13 +44,17 @@ export class QuizzListComponent implements OnInit {
       field: 'dateCreated',
     },
     {
+      header: 'Mã code',
+      field: 'activationCode'
+    },
+    {
       header: 'Tạo câu hỏi',
       field: 'edit',
     },
     {
-      header: 'Làm bài',
-      field: 'exam',
-    },
+      header: 'Điểm',
+      field: 'mark'
+    }
   ]
 
   constructor(private router: Router , private toastService: ToastrService, private quizzService: QuizzService, private store: Store) {}
@@ -75,5 +79,14 @@ export class QuizzListComponent implements OnInit {
 
   public onSelectedQuizz(quizz: QuizzModel): void{
     this.store.dispatch(new SaveSelectedQuizz(quizz));
+  }
+
+  public navigateToStudentMark(): void {
+    this.router.navigate(['/student-mark'])
+  }
+
+  public copyCode(code: string): void {
+    navigator.clipboard.writeText(code);
+    this.toastService.success('Đã copy mã code bài làm vào clipboard!')
   }
 }

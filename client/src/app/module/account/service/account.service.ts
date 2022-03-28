@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import User from '../models/account.model';
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ import User from '../models/account.model';
 export class AccountService {
   public currentUser: Observable<any>;
   private currentUser$: BehaviorSubject<User>;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     this.currentUser$ = new BehaviorSubject(
       JSON.parse(localStorage.getItem('currentUser'))
     );
@@ -40,12 +41,25 @@ export class AccountService {
     );
   }
 
-  public logout(): Observable<any> {
-   return this.http.delete(`${environment.apiHost}/auth/logout`).pipe(
+  public logout(): string {
+   /*return this.http.delete(`${environment.apiHost}/auth/logout`).pipe(
       tap(() => {
         localStorage.removeItem('currentUser');
         this.currentUser$.next(null);
       })
-    );
+    );*/
+    return "OK";
+  }
+
+  public forgetPassword(payload: { newPassword: string}): Observable<any> {
+    return this.http.patch<any>(`${environment.apiHost}/auth/forgetPassword`, payload);
+  }
+
+  public getUserInfo(): Observable<User> {
+    return this.http.get<User>(`${environment.apiHost}/user/me`);
+  }
+
+  public updateInfo(user: User): Observable<User> {
+    return this.http.patch<User>(`${environment.apiHost}/user/me`,user);
   }
 }

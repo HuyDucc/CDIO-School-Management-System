@@ -65,21 +65,14 @@ export class TimerCountdownComponent implements OnInit, OnDestroy {
     const selectedQuizzOnStore = this.store.selectSnapshot(
       QuizzState.selectedQuizz
     );
-    selectedQuizzOnStore.examTime =
-      this.convertTimeService.convertTimerToSeconds(this.timerValue);
-    const quizzChangeExamTime: QuizzModel = {...selectedQuizzOnStore};
-    delete quizzChangeExamTime.dateCreated;
-    delete quizzChangeExamTime.subject.dateCreated;
-    quizzChangeExamTime.questions.forEach((question)=>{
-      delete question.dateCreated;
-    })
+    const quizzUpdatedExamTime = {id: selectedQuizzOnStore.id, examTime: this.convertTimeService.convertTimerToSeconds(this.timerValue)};
     this.quizzService
-      .updateQuizz(quizzChangeExamTime)
+      .updateExamTime(selectedQuizzOnStore.id,quizzUpdatedExamTime)
       .pipe(takeUntil(this.destroyableService.destroy$))
       .subscribe({
         next: () =>
           this.toastService.success(
-            'Hãy quay lại và hoàn thành bài thi của bạn!'
+            'Hãy quay lại và hoàn thành bài thi của bạn'
           ),
         error: () => this.toastService.error('Đã có lỗi bất ngờ xảy ra!'),
       });

@@ -15,8 +15,12 @@ export class QuizzService {
     return this.http.post<QuizzModel>(`${environment.apiHost}/quizz`, quizz);
   }
 
+  public changeQuizzStatus(id: number, status: boolean): Observable<any> {
+    return this.http.get(`${environment.apiHost}/quizz/${id}/status/${status}`)
+  }
+
   public updateQuizz(quizz: QuizzModel): Observable<QuizzModel> {
-    return this.http.put<QuizzModel>(`${environment.apiHost}/quizz`, quizz);
+    return this.http.patch<QuizzModel>(`${environment.apiHost}/quizz`, quizz);
   }
 
   public deleteQuizz(quizzId: number): Observable<any> {
@@ -37,58 +41,69 @@ export class QuizzService {
   }
 
   public getQuizz(subjectId: number): Observable<QuizzModel[]> {
-    return of([
-      {
-        id: 1,
-        name: 'bài 1',
-        dateCreated: '29-09-2021 09:06:59',
-        description: 'ab',
-        examTime: 6900,
-        questions: [
-          {
-            id: 1,
-            text: 'hỏi gì',
-            mark: 2.0,
-            answerA: 'Câu trả lời A',
-            answerB: 'Câu trả lời B',
-            answerC: 'C',
-            answerD: 'D',
-            dateCreated: 'f',
-          }
-        ],
-      },
-      {
-        id: 1,
-        name: 'bài 2',
-        dateCreated: '29-09-2021 09:06:59',
-        description: 'ab',
-        examTime: 12345,
-        questions: [
-          {
-            id: 1,
-            text: 'hỏi gì',
-            mark: 2.0,
-            answerA: 'A',
-            answerB: 'B',
-            answerC: 'C',
-            answerD: 'D',
-            dateCreated: 'f',
-          },
-          {
-            id: 2,
-            text: 'hỏi gì 2',
-            mark: 2.0,
-            answerA: 'A',
-            answerB: 'B',
-            answerC: 'C',
-            answerD: 'D',
-            dateCreated: 'f',
-          },
-        ],
-      },
-    ]);
-    // return this.http.get<QuizzModel[]>(
-    //   `${environment.apiHost}/quizz/bySubject/${subjectId}`
-    // );
+    // return of([
+    //   {
+    //     id: 1,
+    //     name: 'bài 1',
+    //     dateCreated: '29-09-2021 09:06:59',
+    //     description: 'ab',
+    //     examTime: 6900,
+    //     activationCode: 'abcxyz',
+    //     questions: [
+    //       {
+    //         id: 1,
+    //         text: 'hỏi gì',
+    //         mark: 2.0,
+    //         answerA: 'Câu trả lời A',
+    //         answerB: 'Câu trả lời B',
+    //         answerC: 'C',
+    //         answerD: 'D',
+    //         dateCreated: 'f',
+    //       }
+    //     ],
+    //   },
+    //   {
+    //     id: 1,
+    //     name: 'bài 2',
+    //     dateCreated: '29-09-2021 09:06:59',
+    //     description: 'ab',
+    //     examTime: 12345,
+    //     activationCode: 'def',
+    //     questions: [
+    //       {
+    //         id: 1,
+    //         text: 'hỏi gì',
+    //         mark: 2.0,
+    //         answerA: 'A',
+    //         answerB: 'B',
+    //         answerC: 'C',
+    //         answerD: 'D',
+    //         dateCreated: 'f',
+    //       },
+    //       {
+    //         id: 2,
+    //         text: 'hỏi gì 2',
+    //         mark: 2.0,
+    //         answerA: 'A',
+    //         answerB: 'B',
+    //         answerC: 'C',
+    //         answerD: 'D',
+    //         dateCreated: 'f',
+    //       },
+    //     ],
+    //   },
+    // ]);
+    return this.http.get<QuizzModel[]>(
+      `${environment.apiHost}/quizz/bySubject/${subjectId}`
+    );
+  }
+
+  public updateExamTime(quizzId: number,body: {id: number, examTime: number}):Observable<QuizzModel> {
+    return this.http.patch<QuizzModel>(`${environment.apiHost}/quizz/examtime/${quizzId}`,body);
+  }
+
+
+  public saveMark(testQuizzId: number,mark: number): Observable<QuizzModel> {
+    return this.http.post<QuizzModel>(`${environment.apiHost}/studentMark/`,{testQuizzId, mark})
   }
 }

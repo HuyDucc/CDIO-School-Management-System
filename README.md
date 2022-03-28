@@ -1,5 +1,5 @@
-# CDIO-School-Management-System - Nhóm 2
-CDIO4
+# CDIO-School-Management-System
+
 Tài liệu: https://docs.google.com/document/d/1IF0161DW51SMb2w6AFRamR3i3xMjoAZPNmd7XhoQKu0/edit#heading=h.7uh78ifol2db
 ######################################################################################################################
 
@@ -12,17 +12,57 @@ Database: https://dbdiagram.io/d/61396086825b5b0146f9b555
 Discord: https://discord.com/channels/856773246069637152/856773246069637158
 ######################################################################################################################
 
-4. Proposal: https://docs.google.com/document/d/1JYh5wpmIWnowkCd6q8osMEemUTLUdRvYYgIrpEW9rA8/edit
+1. Bìa chính: https://docs.google.com/document/d/1EBx7ctsTq8I8xw5AmERCKTJ__Hc4rM1IYnnYiWWwTmc/edit?usp=sharing
 ######################################################################################################################
 
+2. Bìa phụ: https://docs.google.com/document/d/1VnymG1Q58Nqa4Lcnusy_XJiYRenre8l214ez7Cf4QC8/edit?usp=sharing
+######################################################################################################################
+
+3. Lời cảm ơn: https://docs.google.com/document/d/1wr3YpSGIudBCrikMdRKvf5z4DU8JtG4yvedVC_P9P0E/edit?usp=sharing
+######################################################################################################################
+
+4. Proposal: https://docs.google.com/document/d/1JYh5wpmIWnowkCd6q8osMEemUTLUdRvYYgIrpEW9rA8/edit
+######################################################################################################################
 
 5. Project plan: https://docs.google.com/document/d/1PthBGdnf2dbHK3wOtvVAS09SxUZyUrg_pGHph-SHd8A/edit
 ######################################################################################################################
 
 6. User story: https://docs.google.com/document/d/1ZmeS09tMfcT-G_6M4K8Y9ClrVsAC3Y3xBXWFSEPK8mI/edit
+######################################################################################################################
 
 7. Product backlog: https://docs.google.com/document/d/1daPPWnOR-g_wjuNjyJDk4t33Fo6n8o0dQKyifkAoG_c/edit#
 ######################################################################################################################
+
+8. Interface Design: https://docs.google.com/document/d/12lY7gO94c9iotlvSE26G7N4Pyge_feki9V24le5Tpd4/edit?fbclid=IwAR3N71-2N9MrWQ7cw2bHAOdCT0kPawXdRPQoxIL2DCBYE1N_FmmiPpLaO8E#
+######################################################################################################################
+9. Database Design: https://docs.google.com/document/d/1tKkKocEX583e1ZALRerd-iT1xeMEgOg0T2rtVV0ZWjo/edit?usp=sharing
+######################################################################################################################
+10. Test Plan: https://docs.google.com/document/d/1pvj_f2KhEa2sdE7qA0ZIE6fxFMdnBOkcD9qqDjpWRDM/edit#
+######################################################################################################################
+11. Naming Convention: https://docs.google.com/document/d/1wDqKNuwlZg-MscVntuAPhc1VulhVvfjfmrzC6pwkM28/edit?usp=sharing
+######################################################################################################################
+12. Coding Convention: https://docs.google.com/document/d/1CnNrw3iEg1osgf_IMH4xHpmqZ739PjZbvJNgIzDHPMU/edit?usp=sharing
+######################################################################################################################
+13. Meeting With Mentor: https://docs.google.com/document/d/10ptU_kP9VP8WJeY84mGpWF4oAxog3QOOTBPOtnPC9p0/edit?usp=sharing
+######################################################################################################################
+14. Weekly Meeting: https://docs.google.com/document/d/1G2CnxVakIU6iFlz0Ah1LDPlMdAjFQounW5kgrVMSHso/edit?usp=sharing
+######################################################################################################################
+15. Kết luận: https://docs.google.com/document/d/1y72gP6nS72ipnLLov6T6yKPL0RR6BoWy_y_Gly82oP8/edit?usp=sharing
+######################################################################################################################
+
+Sprint_Backlog-Bìa: https://docs.google.com/document/d/1CyZCS4-Pdv8b_ImbL_SuweJlTyHQH0YLFbNWAyWAd98/edit?usp=sharing
+######################################################################################################################
+
+* SprintBacklog https://docs.google.com/spreadsheets/d/1A8aFyrPWbRDLea1L0J4s2WEUuQh5LjcSHqebL_3JFMw/edit#gid=0
+######################################################################################################################
+
+* TEST CASE
+* TEST1: https://docs.google.com/spreadsheets/d/1TKhkPtoo311MlBpH-6x5WwhKGinbcXlBWU_tF_Vk41Q/edit?fbclid=IwAR2j6iLtlG9KZBDCzlg-sMpwVytFOt_Et8QNpzDB8LJBxy3wo34W6KMmeqE#gid=585024898
+* TEST2: https://docs.google.com/spreadsheets/d/1AqxBFBCaIfVZqyddFap-dCMs7DWjdf0g07eBH3MdMlc/edit?usp=sharing
+* TEST3: https://docs.google.com/spreadsheets/d/1Vy_Lujy7hKYTYmV4ipmPMq01nZ8fdIqKeBORTFJuy2E/edit?usp=sharing
+
+USE CASES: https://drive.google.com/drive/folders/1TMUT76Jz-wj22ueF9ceRLGB-wq1cay4f?usp=sharing
+
 
 
 
@@ -57,38 +97,17 @@ Discord: https://discord.com/channels/856773246069637152/856773246069637158
         "password": "1q2w3e456789"
      }
      
-   response
-  
-        "User Registration Successfully"
 
  SUBJECT 
      
+ 
+ POST, PUT
  request
  
      {
-        "name": "PHP",
-        "teacher": {
-        "teacherId": 1
-        }
+        "name": "English"
      }
-     
- response
- 
-     {
-        "id": 5,
-        "name": "PHP",
-        "dateCreated": "14-10-2021 02:21:26",
-        "teacher": {
-            "teacherId": 1,
-            "name": "James Gosling",
-            "position": "Professor"
-        }
-    }
-     
-     
-     
-     
- 
+
  QUIZZ
  
  
@@ -157,82 +176,7 @@ Discord: https://discord.com/channels/856773246069637152/856773246069637158
         ]
     }
     
-    
- All Teacher
-    
-    [
-        {
-            "teacherId": 1,
-            "name": "James Gosling",
-            "position": "Professor"
-        },
-        {
-            "teacherId": 2,
-            "name": "Guido van Rossum",
-            "position": "Professor"
-        },
-        {
-            "teacherId": 3,
-            "name": "Brendan Eichh",
-            "position": "Professor"
-        },
-        {
-            "teacherId": 4,
-            "name": "Anders Hejlsberg",
-            "position": "Professor"
-        },
-        {
-            "teacherId": 5,
-            "name": "Bjarne Stroustrup",
-            "position": "Professor"
-        },
-        {
-            "teacherId": 6,
-            "name": "Martin Odersky",
-            "position": "Professor"
-        }
-    ]
-    
-  POST Teacher
-    
-   request
-   
-     {
-        "name": "Quang Huy",
-        "position": "Professor"
-      }
-    
-  response
-  
-    {
-        "teacherId": 8,
-        "name": "Quang Huy",
-        "position": "Professor"
-    }
-    
- PUT Teacher
- 
-   request
-    
-      {
-          "teacherId": 7,
-          "name": "Quang Huyyyyy",
-          "position": "Professor"
-      }
-      
-     
-   response
-   
-      {
-          "teacherId": 8,
-          "name": "Quang Huyyyy",
-          "position": "Professor"
-      }
-      
-      
-   DELETE 
-   
-      Chỉ cần http://localhost:8080/api/teacher/{id}
+       
       
       
  QUIZZ
@@ -257,6 +201,9 @@ Discord: https://discord.com/channels/856773246069637152/856773246069637158
         "description": "First quizz",
         "examTime": 1100,
         "questions": null,
+        "isStart": null,
+        "isEnd: null,
+        "activationCode": 416001,
         "subject": {
             "id": 1,
             "name": "Java",
@@ -297,6 +244,12 @@ Discord: https://discord.com/channels/856773246069637152/856773246069637158
    DELETE Quizz
    
       Chỉ cần http://localhost:8080/api/quizz/{id}
+      
+   
+   GET
+    
+      /api/quizz/{id}/status/{status}
+      EX: /api/quizz/40/status/false
       
       
       
@@ -373,41 +326,95 @@ Student Mark
     }
     
     
- GET   /api/studentMark/user/{userId}               
+  GET   
+ 
+    /api/studentMark/quizz/{id}
+    EX: /api/studentMark/quizz/2  
     
     [
         {
-            "id": 3,
-            "mark": 8.0,
-            "testQuizzId": 2,
-            "userId": 1
+          "id": 3,
+          "mark": 8.0,
+          "testQuizzId": 2,
+          "testQuizzName": "Quizz A",
+          "username": "quanghuy"
         },
         {
-            "id": 4,
-            "mark": 8.0,
-            "testQuizzId": 3,
-            "userId": 1
+          "id": 7,
+          "mark": 8.0,
+          "testQuizzId": 2,
+          "testQuizzName": "Quizz A",
+          "username": "summer"
         }
     ]
     
     
-  GET   /api/studentMark/quizz/{testId}
+  GET  
+  
+    /api/studentMark/user/{username}
+    EX: /api/studentMark/user/summer
   
     [
         {
-            "id": 3,
+            "id": 6,
             "mark": 8.0,
+            "testQuizzId": 33,
+            "testQuizzName": "Test A",
+            "username": "summer"
+        },
+        {
+            "id": 8,
+            "mark": 10.0,
             "testQuizzId": 2,
-            "userId": 1
+            "testQuizzName": "Quizz A",
+            "username": "summer"
         }
     ]
     
     
-  GET   /api/studentMark/quizz/code/{code}
+  GET   /api/quizz/code/{code}
     
     http://localhost:8080/api/quizz/code/780226
+    
   
+  Account Lock
   
+    /api/user/{id}/enabled/{status}
+    Ex: /api/user/2/enabled/true  
+    
+  Resetpassword
+  
+    /api/auth/resetPassword/{email} 
+    
+  User
+  
+  POST
+   
+    /api/user/
+    
+      {
+        "username": "Alex",
+        "email": "alex@gmail.com",
+        "fullName": "Jame Alex",
+        "role": "ROLE_STUDENT",
+        "position": "Student of DTU"
+      }
+  
+   PATCH
+   
+    /api/user/
+    
+       {
+         "userId": 33,
+         "username": "alex",
+         "email": "alex@gmail.com",
+         "fullName": "Alex CLI",
+         "password": "1q2w3e456789", // reset password
+         "enabled": false,
+         "role": "ROLE_STUDENT",
+         "position": "SP"
+       }
+      
 
     
       
